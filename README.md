@@ -204,12 +204,23 @@ Sovereign Advisor: Perfect — I'm now running your personalised analysis. This 
 
 ```
 sovereign-advisor/
-├── main.py                        # FastMCP server — all 8 financial tools
+├── main.py                        # FastMCP server entry point — registers all 8 tools
 ├── enable_activity.py             # One-time script to enable A2A on Foundry agent
-├── orchestrator_system_prompt.txt # Sovereign Advisor system prompt
-├── product_matcher_prompt.txt     # Product Matcher system prompt
-├── foundry_system_prompt.txt      # Suitability Engine system prompt
-└── README.md
+├── requirements.txt               # Python dependencies
+├── .env.example                   # Environment variable template
+├── README.md
+├── screenshots/                   # Project screenshots
+│   └── *.png
+└── src/
+    ├── config.py                  # Configuration and environment loading
+    ├── models/
+    │   └── schemas.py             # Pydantic input/output models
+    └── tools/
+        ├── debt.py                # debt_cost, transfer_fee_vs_interest
+        ├── investments.py         # jisa_projection
+        ├── mortgage.py            # mortgage_affordability
+        ├── pension.py             # pension_gap, drawdown_sustainability
+        └── savings.py             # savings_gap, emergency_fund_target
 ```
 
 > **Note:** The `kb/` folder is not included. KB documents (KB001–KB007 and Required-Fields-by-Persona) are hosted in SharePoint as the live knowledge source for Copilot Studio.
