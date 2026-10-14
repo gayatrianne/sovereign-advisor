@@ -1,0 +1,32 @@
+# ============================================================
+# Sovereign Advisor MCP Server — Python Dependencies
+# ============================================================
+# Install with:  pip install -r requirements.txt
+# Python version: 3.11+ (Azure Functions v4 default)
+# ============================================================
+
+# ------------------------------------------------------------
+# MCP (Model Context Protocol) SDK
+# Anthropic's open-source SDK for building MCP tool servers.
+# Handles the stdio/SSE transport, tool registration, and
+# JSON-RPC message protocol that Azure AI Foundry uses to
+# discover and call the tools defined in this server.
+# ------------------------------------------------------------
+mcp>=1.0.0
+
+# ------------------------------------------------------------
+# Pydantic v2
+# Data validation for tool input and output schemas.
+# All tool arguments and return values are typed Pydantic
+# models so Foundry receives accurate JSON Schema definitions
+# for each tool in the server's tool manifest.
+# ------------------------------------------------------------
+pydantic>=2.0.0
+
+# ------------------------------------------------------------
+# python-dotenv
+# Loads .env file into os.environ at startup.
+# Config values are read via config.py — not directly from
+# os.environ in tool files — to keep all env access in one place.
+# ------------------------------------------------------------
+python-dotenv>=1.0.0

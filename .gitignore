@@ -1,0 +1,67 @@
+# ============================================================
+# Sovereign Advisor MCP Server — .gitignore
+# ============================================================
+
+# ------------------------------------------------------------
+# Environment and secrets
+# Never commit .env — it contains API keys and connection strings
+# Use .env.example as the template for team onboarding
+# ------------------------------------------------------------
+.env
+*.env.local
+*.env.production
+
+# ------------------------------------------------------------
+# Python artefacts
+# ------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# ------------------------------------------------------------
+# IDE and editor files
+# ------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ------------------------------------------------------------
+# Test and coverage
+# ------------------------------------------------------------
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# ------------------------------------------------------------
+# Azure Functions deployment artefacts
+# (generated at deploy time — not source files)
+# ------------------------------------------------------------
+.python_packages/
+local.settings.json
