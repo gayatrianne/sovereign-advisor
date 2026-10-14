@@ -80,13 +80,17 @@ All 8 tools accept flat key-value parameters (Azure AI Foundry compatibility).
 
 ---
 
-## 📚 Knowledge Base Structure
+## 📚 Knowledge Base
+
+The KB documents are hosted in SharePoint and connected as a knowledge source in Copilot Studio. They are not included in this repository.
 
 | File | Purpose |
 |---|---|
 | KB001–KB006 | Product knowledge base (ISAs, pensions, mortgages, etc.) |
 | KB007 | Standard fact-find question set |
 | Required-Fields-by-Persona | Minimum data fields by client life stage |
+
+> To replicate the setup, create a SharePoint site, upload your own KB documents, and point the Copilot Studio knowledge source to that site.
 
 ---
 
@@ -205,17 +209,10 @@ sovereign-advisor/
 ├── orchestrator_system_prompt.txt # Sovereign Advisor system prompt
 ├── product_matcher_prompt.txt     # Product Matcher system prompt
 ├── foundry_system_prompt.txt      # Suitability Engine system prompt
-├── kb/
-│   ├── KB001_Cash_ISA.docx
-│   ├── KB002_Stocks_and_Shares_ISA.docx
-│   ├── KB003_Personal_Pension.docx
-│   ├── KB004_Mortgage.docx
-│   ├── KB005_Emergency_Fund.docx
-│   ├── KB006_JISA.docx
-│   ├── KB007_Fact_Find_Questions.docx
-│   └── Required_Fields_by_Persona.docx
 └── README.md
 ```
+
+> **Note:** The `kb/` folder is not included. KB documents (KB001–KB007 and Required-Fields-by-Persona) are hosted in SharePoint as the live knowledge source for Copilot Studio.
 
 ---
 
@@ -259,7 +256,7 @@ Matched products: Personal Pension, Stocks & Shares ISA.
 
 **Gayatri Anne**  
 AI & Cloud Architect | 18+ Years Enterprise IT  
-[GitHub: gayatrianne](https://github.com/gayatrianne)
+[GitHub: gayatrianne/sovereign-advisor](https://github.com/gayatrianne/sovereign-advisor)
 
 ---
 
